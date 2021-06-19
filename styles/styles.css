@@ -1,5 +1,5 @@
 /* Import Font */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Import Font */
 
 /* Par Ordre de Priorité : 
@@ -12,10 +12,11 @@
 /* GENERAL TOUTE LA PAGE */
 
 body{
-    font-family: "Raleway", "Sans serif";
+    font-family: "Raleway", sans-serif;
     /* margin: 0; */
-    width: 1230px;
+    width:1300px;
     margin:auto;
+    
 }
 
 a {
@@ -23,14 +24,193 @@ a {
     text-decoration: none;
   }
 
+li{
+    color:#0065FC
+}
+
+h1, h2, h3{
+    font-weight: 800;
+    height:25px
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 1em;
+}
+
+
+
+
+/* HEADER */
+
+@media screen and (min-width: 601px){ 
+.header {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar button";
+}
+
+
+.header{
+    display: grid;
+    align-items: center;
+    margin:auto;
+ }
+
+.logo_header
+{
+    grid-area: logo;
+}
+
+.navbar_header{
+    display: flex;
+    align-items: center;
+    grid-area: navbar;
+}
+
+.navbar_header_link {
+    padding: 2rem;
+    font-weight: 500;
+    text-align: center;
+    transition-duration: 0.1s;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+  }
+ 
+}
+
+  .header_SignUp {
+    display: flex;
+    align-items: center;
+    grid-area: button;
+    padding: 2rem;
+    color: #0065FC;
+    font-weight: 600;
+  }
+
+
+
+
+/* BARRE DE RECHERCHE */
+
+.formu_city {
+    display: inline-flex;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+.formu_city_icon_gps{
+    background-color: #F2F2F2;
+    padding:1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+
+
+
+.formu_city_field{
+    border: 1px solid;
+    border-color: #F2F2F2;
+    text-align: left;
+    padding-left: 20;
+    font-weight: 700;
+    color: #000;
+}
+
+::placeholder {
+    color: #000;
+  }
+
+.formu_city_button{
+    background-color:#0065FC ;
+    border-radius: 0 1rem 1rem 0;
+    border:transparent;
+}
+
+/* FILTRES */
+
+.filters_search{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.filters_search i{
+    color:#0065FC;
+ }
+ 
+.filters_search_title{
+    margin-right: 40px;
+}
+
+
+.filters_search_filter{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding:;
+    border-radius:3rem;
+    text-align: center;
+    border: 3px solid #F2F2F2;
+    margin-right: 1.5rem;
+}
+
+
+
+.filters_search_filter_icon{
+    background-color: #DEEBFF ;
+    border-radius:100%;
+    text-align: center;
+    height:3rem;
+    width:3rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: -2px;
+ }
+   
+
+.filter_title{
+    display: flex;
+    align-items: center;
+    margin:0 10px 0 10px;
+}
+
+
+
+/* FREE ROOOOOOOMS*/
+
+.free_rooms{
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+
 
 
 /* HEBERGEMENT A MARSEILLE */
-#hebergements_marseille
+.hebergements_marseille
 {
     display: grid;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    padding:3.5rem;
+    background-color: #F2F2F2;
+    border-radius: 1.25rem;
+}
+
+.hebergements_populaires
+{
+    display: grid;
+    column-gap: érem;
+    row-gap: 2.5rem;
+    padding:2.5rem;
+    margin-right 100px;
+    
 }
 
 .hebergements_marseille_card_img {
@@ -65,18 +245,12 @@ a {
 .hebergements
  {
     display: grid;
-    column-gap: 2rem;
+    column-gap: 3rem;
     grid-template-columns: 6fr 3fr;
     list-style-type: none;
   }
 
-.hebergements_marseille  {
-    display: grid;
-    column-gap: 2rem;
-    row-gap: 2rem;
-    background-color: #F2F2F2;
-    border-radius: 1.25rem;
-}
+
 
 .hebergements_marseille h1
 {
@@ -106,10 +280,17 @@ a {
 
 .main {
     max-width: 1440px;
-    margin: auto;
     padding: 0 2rem;
     box-sizing: border-box;
 }
+
+
+.hergement_marseille_more{
+    padding-top:15px;
+    font-weight: 800;
+    font-size:1.1em;
+}
+
 
 
 
@@ -120,6 +301,83 @@ aside{
     border-radius: 1.25rem;
 }
 
+
+
+
+
+.hebergements_populaires_card{
+    background-color: #FFFFFF;
+    border-radius: 1.25rem;
+    padding:0.3rem;
+    display:grid;
+    
+}
+
+.hebergements_populaires_card_card{
+    
+}
+
+.hebergements_populaires_card_card_link{
+    display: flex;
+    align-items: stretch;
+}
+
+.hebergements_populaires_card_infos_title
+{
+    margin-left: 20;
+    margin-top:5;
+    margin-bottom: 3;
+}
+
+.hebergements_populaires_card_infos_p
+{
+    margin-left: 20;
+    margin-top:0;
+    margin-bottom: 5;
+}
+
+.hebergements_populaires_card_infos_reviews
+{
+    margin-left: 20;
+    margin-top: 35;
+}
+
+
+
+.hebergements_populaires_title{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top:8;
+    margin-bottom: 0;;
+}
+
+.hebergements_populaires_card_img_img{
+    border-radius: 1rem 0 0 1rem;
+    height:9rem;
+    width:9rem;
+    object-fit: cover;
+}
+
+.hebergements_populaires_card_card {
+    height: 8.75rem;
+  }
+
+
+
+.hebergements_populaires_card_card_link {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    overflow:hidden;
+  }
+
+
+
+  .hebergements_populaires_card_infos {
+    display: flex;
+    flex-direction: column;
+  }
 
 
 
