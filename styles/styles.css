@@ -1,0 +1,160 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;&display=swap");
+/* Import Font */
+
+/* Par Ordre de Priorité : 
+    1) Général à toute la page
+    2) Header
+    3) Main
+    4) Footer
+*/
+
+body{
+    font-family: "Raleway", "Sans serif";
+    /* margin: 0; */
+    width: 1230px;
+    margin:auto;
+}
+
+
+
+
+
+
+.section_activités #hebergements_marseille .ContainerActivitésMarseille
+{
+    display: flex;
+}
+
+
+.section_hebergements img
+{
+    position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+  }
+
+
+
+
+.section_hebergements
+{
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+
+#hebergements_marseille
+{
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+
+
+  .HostingCard img {
+    height: 7rem;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+
+
+.hebergements
+ {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 6fr 3fr;
+  }
+
+  .hebergements_marseille  {
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.hebergements_marseille h1
+{
+    grid-column: 1/-1;
+  }
+
+.hebergements_marseille h1 {
+    margin: 0;
+}
+
+@media (min-width: 925px) {
+    .hebergements_marseille {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+.hebergements_marseille_card {
+    background-color: white;
+    padding: 0.375rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.main {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: #F2F2F2;
+}
+
+.ContainerFooter{
+display: grid;
+text-align: left;
+}
+
+.ContainerFooter ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.ContainerFooter a {
+text-decoration: none;
+}
+
+footer section{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left:50px;
+    padding-right:50px;
+
+}
+
+footer li{
+    margin: 0 0 10px;
+}
+
+
+@media (min-width: 925px) {
+.ContainerFooter{
+      grid-template-columns: repeat(3, 1fr);
+}   }
+/* FOOTER */
