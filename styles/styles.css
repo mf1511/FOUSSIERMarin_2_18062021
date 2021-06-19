@@ -9,6 +9,8 @@
     4) Footer
 */
 
+/* GENERAL TOUTE LA PAGE */
+
 body{
     font-family: "Raleway", "Sans serif";
     /* margin: 0; */
@@ -16,37 +18,14 @@ body{
     margin:auto;
 }
 
-
-
-
-
-
-.section_activités #hebergements_marseille .ContainerActivitésMarseille
-{
-    display: flex;
-}
-
-
-.section_hebergements img
-{
-    position: relative;
-    min-height: 100%;
-    width: 33%;
-    min-width: 33%;
-    max-width: 33%;
+a {
+    color: inherit;
+    text-decoration: none;
   }
 
 
 
-
-.section_hebergements
-{
-    display: grid;
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-
-
+/* HEBERGEMENT A MARSEILLE */
 #hebergements_marseille
 {
     display: grid;
@@ -54,9 +33,7 @@ body{
     row-gap: 2rem;
 }
 
-
-
-  .HostingCard img {
+.hebergements_marseille_card_img {
     height: 7rem;
     object-fit: cover;
     max-width: 100%;
@@ -65,19 +42,40 @@ body{
     border-radius: 1rem 1rem 0 0;
   }
 
+.hebergements_marseille_card figure {
+    margin: 0;
+  }
 
+.hebergements_marseille_card figcaption h3 {
+      margin-top:6px;
+      margin-bottom: 6px;
+      margin-left:8px;
+  }
+
+.hebergements_marseille_card_price{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 8px;
+}
+
+.hebergements_marseille_card_review_badge{
+    margin-left: 8px;
+}
 
 .hebergements
  {
     display: grid;
     column-gap: 2rem;
     grid-template-columns: 6fr 3fr;
+    list-style-type: none;
   }
 
-  .hebergements_marseille  {
+.hebergements_marseille  {
     display: grid;
     column-gap: 2rem;
     row-gap: 2rem;
+    background-color: #F2F2F2;
+    border-radius: 1.25rem;
 }
 
 .hebergements_marseille h1
@@ -94,8 +92,6 @@ body{
       grid-template-columns: repeat(3, 1fr);
     }
 }
-
-
 
 .hebergements_marseille_card {
     background-color: white;
@@ -114,6 +110,48 @@ body{
     padding: 0 2rem;
     box-sizing: border-box;
 }
+
+
+
+/* LES PLUS POPULAIRES */
+
+aside{
+    background-color: #F2F2F2;
+    border-radius: 1.25rem;
+}
+
+
+
+
+
+
+
+/* ACTIVITES MARSEILLE */
+
+.ActivitésMarseilleCard{
+    display: grid;
+}
+
+@media (min-width: 925px) {
+    .ActivitésMarseilleCard {
+      grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.ActivitésMarseilleCard4 {
+    background-color: white;
+    padding: 0.375rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+
 
 
 
