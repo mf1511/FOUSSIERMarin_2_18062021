@@ -5,6 +5,7 @@
 .body{
     max-width: 1230px;
     margin: auto;
+    padding:2rem;
     font-family: "Raleway", sans-serif;
 }
 
@@ -94,6 +95,9 @@ em{
 /* SECTION RECHERCHE */
 
             /* FORM*/
+
+
+
 
 .recherche_titre h1{
     margin-bottom:5px;
@@ -248,6 +252,10 @@ em{
     margin-bottom: 40px;
 }
 
+
+
+
+
 .hebergements_main, .hebergements_populaires{
     padding:2.1rem;
 }
@@ -337,6 +345,7 @@ em{
 
 .hebergement_popu_title{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 8;
     margin-bottom: 0;
@@ -369,15 +378,22 @@ em{
 
 }
 
+.popu_img{
+    position: relative;
+    height: 100%;
+    width: 33%;
+    
+}
+
 .popu_img_img{
     border-radius: 1rem 0 0 1rem;
     height: 100%;
-    width: 8rem;
+    width: 100%;
     object-fit: cover;
 }
 
 .popu_img_infos{
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .popu_img_infos h3{
@@ -412,7 +428,40 @@ em{
 
 
 
-@media (min-width:1100px){
+@media (max-width: 1200px){
+
+    .hebergements{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hebergement_popu_title{
+        grid-column: 1/-1;
+    }
+
+    .hebergements_populaires{
+        display: grid;
+        grid-row-start: 1;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: 1rem;
+    }
+
+
+    .hebergement_main_title{
+        grid-column: 1/-1;
+    }
+    
+    .hebergements_main{
+        display: grid;
+        grid-row-start: 2;
+        grid-template-columns: repeat(3, 1fr);;
+    }
+}
+
+
+
+@media (min-width:1200px){
     .hebergements_main{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1.5rem 12rem 12rem 1.5rem;
@@ -434,6 +483,32 @@ em{
     }
 
 }
+
+@media (min-width:768px) and (max-width: 1030px){
+    .hebergements{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hebergements_populaires{
+        display: grid;
+        grid-row-start: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, 1fr);
+        row-gap: 1rem;
+    }
+}
+
+@media (min-width:576px) and (max-width: 768px) {
+    .hebergements_main{
+        background-color: #000;
+    }
+}
+
+
+
+
+
 
 /* HEBERGEMENTS END*/
 
@@ -484,6 +559,20 @@ em{
     border-radius: 1rem 1rem 0px 0px;
     object-fit: cover;
     position:absolute;
+}
+
+
+@media (max-width: 1100px) {
+    .activites{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 12rem 12rem 12rem;
+        row-gap: 2rem;
+    }
+
+    .activites_title {
+        grid-column: 1/-1;
+                    }
 }
 
 @media (min-width: 1100px){
