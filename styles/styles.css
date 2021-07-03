@@ -169,7 +169,6 @@ em{
 .recherche_formulaire_formulaire{
     display: inline-flex;
     max-width: 100%;
-  overflow: auto;
   height: 3rem;
   margin: 0rem 0rem 1rem 0rem;
 }
