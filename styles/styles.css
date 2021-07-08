@@ -2,13 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 
 body{
-    max-width: 1230px;
-    margin: auto;
     font-family: "Raleway", sans-serif;
-}
+    margin: 0px;
+
+    }
 
 main{
     padding:0 2rem 0 2rem;
+    max-width: 1230px;
+    margin: auto;
+
+
 }
 h1{
     font-size: 1.3em;
@@ -30,6 +34,8 @@ em{
 .header{
     display: grid;
     align-items: center;
+    max-width: 1230px;
+    margin: auto;
 }
 
 .logo_header, .header_navbar, .header_signup{
@@ -39,7 +45,7 @@ em{
 }
 
 .logo_header{
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 1rem 1rem 0rem;
 }
 
 .header_navbar_titre{
@@ -163,12 +169,12 @@ em{
     border:0px;
     border-color: #FFFFFF;
     border-top: #F2F2F2 1px solid;
-  border-bottom: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
     font-size: 1em;
     font-weight: 800;
     color: black;
     padding:1rem 1rem 1rem 0rem;
-    
+    width: 15rem;
     height: 100%;
     padding: 0 1.5rem;
 }
@@ -229,6 +235,7 @@ em{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 .filtres_button p{
     padding:0 1rem 0 0.8rem;
@@ -284,6 +291,18 @@ em{
     background-color: #f2f2f2;
     border-radius: 1rem;
 }
+
+.hebergement_main_button{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    width: 6rem;
+    background-color: #f2f2f2;
+
+}
+
+
 .hebergements_main h1 {
     margin: 0px;
 }
@@ -309,8 +328,16 @@ em{
     list-style-type: none;
     padding:0px;
     color:#0065FC;
-    margin-top: 3px;
+    margin: 1rem 0rem 0rem 0rem;
 }
+
+.main_card_infos li{
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+
+
 .main_card_infos h3{
     margin-bottom: 1px;
     margin-top: 4px;
@@ -345,8 +372,8 @@ em{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 8;
-    margin-bottom: 0;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 .hebergement_popu_title h1{
     margin : 0;
@@ -381,33 +408,46 @@ em{
     object-fit: cover;
 }
 .popu_img_infos{
-    margin-left: 10px;
+    margin-left: 1.2rem;
+    margin-right: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.space{
+    flex: 2;
 }
 .popu_img_infos h3{
-    margin-bottom: 0px;
+    margin:0.7rem 0rem 0rem 0rem;
 }
 .popu_img_infos ul{
     list-style-type: none;
     padding: 0;
     color:#0065FC;
-    margin:30px 0 0 0;
+    margin: 0rem 0rem 0.5rem 0rem;
 }
 .popu_img_infos p{
     font-size: 0.9em;
     margin-top: 4px;
+    margin-bottom: 0;
 }
 .popu_list{
     display: flex;
     flex-wrap: nowrap;
 }
-.popu_list .fas{
-    font-size: 11px;
+
+.empty{
+    color: #e2e2e2;
 }
+.popu_list .fas{
+    font-size: 12px;
+    margin-right: 1px;}
 
 
 @media (max-width: 1200px){
     .hebergements{
         display:grid;
+        row-gap: 2rem;
         grid-template-columns: 1fr;
     }
     .hebergement_popu_title{
@@ -428,6 +468,8 @@ em{
         grid-row-start: 2;
         grid-template-columns: repeat(3, 1fr);;
     }
+
+
 }
 
 @media (min-width:1200px){
@@ -435,7 +477,7 @@ em{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1.5rem 12rem 12rem 1.5rem;
     }
-    .hebergements_main h1{
+    .hebergements_main .hebergement_main_title{
         grid-column:1/-1;
     }
     .main_card1{
@@ -473,7 +515,7 @@ em{
 }
 
 @media (max-width: 600px) {
-    .hebergements_main, .{
+    .hebergements_main{
         display: grid;
         grid-template-rows: auto repeat(6, 1fr);
         grid-template-columns: 1fr;
@@ -549,7 +591,7 @@ em{
 @media (min-width: 1100px){
     .activites{
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto 15rem 3rem 3rem 13rem;
+        grid-template-rows: auto 10rem 2rem 2rem 8rem;
     }
     .activites_title {
         grid-column: 1/-1;
@@ -594,10 +636,15 @@ em{
 /* FOOTER */
 .footer{
     background-color: #f2f2f2;
+}
+
+
+.footer_container{
+    width: 1230px;
+    margin: auto;
     display: grid;
     justify-content: space-around;
 }
-
 .footer ul{
     list-style-type: none;
     padding:0px;
@@ -619,15 +666,13 @@ em{
 }
 
 @media (min-width:800px){
-    .footer{
+    .footer_container{
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1300px;
-    margin: auto;
     }
 }
 
 @media (max-width: 799px){
-    .footer{
+    .footer_container{
         display: flex;
         flex-direction: column;
 }
