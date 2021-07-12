@@ -210,12 +210,23 @@ em{
     .input__city{
         width: 10rem;
         padding: 0rem 0rem 0rem 0.5rem;
+       
     }
 
     .recherche_formulaire_button_button{
         padding: 0 0.5rem;
+       
     }
     
+}
+
+@media (max-width:380px) {
+    .input__city{
+        width: 9rem;       
+    }
+    .recherche_formulaire_button_button{
+        font-size: 12px;
+    }
 }
 /* FORM END*/
 
